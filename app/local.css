@@ -1,18 +1,20 @@
+/* palette: coolors.co/14080e-49475b-799496-c5e5f4-9d6381 */ 
+
 body {
 	font-family: serif;
-	background-color: #c9f0ff;
+	background-color: #c5e5f4;
 	margin: 0 auto;
 	padding: 0;
 }
 
 #header {
-	background-color: #22223b;
-	color: #e7dfc6;
+	background-color: #49475b;
+	color: #c5e5f4;
 	max-width: 100%;
 	height: 100px;
 	text-align: center;
 	margin: 0 auto;
-	border-bottom: 3px solid #d2a9f2;
+	border-bottom: 3px solid #9d6381;
 }
 
 #header h1 {
@@ -23,6 +25,7 @@ body {
 	max-width: 600px;
 	margin: 0 auto;
 	padding: 0.4em 2em;
+	color: #14080e;
 }
 
 h1, h3 {
