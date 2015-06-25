@@ -35,8 +35,3 @@ h1, h3 {
 a {
 	text-decoration: none;
 }
-
-.mono {
-	font-family: 'Monaco', 'Courier', monospace;
-	font-size: 0.75em;
-}

@@ -2,7 +2,8 @@
 
 var express = require('express');
 var bodyParser = require('body-parser');
-var _ = require('lodash');
+//var _ = require('lodash');
+var moment = require('moment');
 
 var postDay = require('./lib/postday.js')
 var anxietyLog = require('./lib/anxietylog.js')
@@ -15,7 +16,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.post('/new', function(req, res) {
-  postDay(anxietyLog, )
+  // postDay(anxietyLog, );
 });
 
 app.get('/day', function(req, res) {
