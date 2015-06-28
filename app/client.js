@@ -5,11 +5,9 @@ $(function() {
 
   $('#new-entry').on('submit', function(event) {
     event.preventDefault();
-    var newDate = $('#new-date').val();
-    var newScale = $('#new-scale').val();
-    var newNotes = $('#newNotes').val();
-    $.post('/day', [anxietyLog, newDate, newScale, newNotes], function(response) {
-      
+    var newEntry = [$('#new-date').val(), $('#new-scale').val(), $('#new-notes').val()];
+    $.post('/day', anxietyLog, newEntry, function(response) {
+
     });
   });
 

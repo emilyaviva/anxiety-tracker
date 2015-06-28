@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.post('/new', function(req, res) {
-  // postDay(anxietyLog, );
+  postDay(req, anxietyLog);
 });
 
 app.get('/day', function(req, res) {
