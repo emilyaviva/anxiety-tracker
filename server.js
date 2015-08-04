@@ -1,28 +1,19 @@
 'use strict';
 
 var express = require('express');
-var bodyParser = require('body-parser');
-//var _ = require('lodash');
-var moment = require('moment');
-
-var postDay = require('./lib/postday.js')
-var anxietyLog = require('./lib/anxietylog.js')
+var mongoose = require('mongoose');
 
 var app = express();
 var port = process.env.PORT || 3000;
 
-app.use(express.static(__dirname + '/app/'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.static(__dirname + '/build'));
 
-app.post('/new', function(req, res) {
-  postDay(req, anxietyLog);
-});
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/anxiety_tracker_app');
 
-app.get('/day', function(req, res) {
-  console.log('Nothing here yet');
-});
+var datesRoutes = express.Router();
+require('./routes/dates_routes/datesRoutes')(datesRoutes);
+app.use('/api', datesRoutes);
 
 app.listen(port, function() {
   console.log('server listening on port', port);
-})
+});

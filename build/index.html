@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="local.css">
+	<title>Anxiety Tracker</title>
+</head>
+
+<body>
+
+<div id="header">
+	<h1>Anxiety Tracker</h1>
+</div>
+
+<div id="main">
+
+<form id="new-entry">
+	<label for="new-date">Date:
+		<input required type="text" id="new-date">
+	</label>
+	Scale: <select required id="new-scale">
+		<option>1</option>
+		<option>2</option>
+		<option>3</option>
+		<option>4</option>
+		<option>5</option>
+		<option>6</option>
+		<option>7</option>
+		<option>8</option>
+		<option>9</option>
+		<option>10</option>
+	</select>
+	<br>
+	<label for="new-notes">Notes:
+		<input type="textarea" id="new-notes" rows="100" cols="300">
+	</label>
+	<br/>
+	<input type="submit" value="Add new entry">
+</form>
+<p id="output-message"></p>
+
+<ul id="log"></ul>
+
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="client.js"></script>
+
+</body>
+
+</html>
